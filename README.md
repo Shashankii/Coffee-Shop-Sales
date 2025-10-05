@@ -131,7 +131,7 @@ git clone https://github.com/Shashankii/Coffee-Shop-Sales.git
 
 ## 🔗 Quick Links  
 
-- 📘 **SQL Scripts:** [`sql/coffee_sales_analysis.sql`](sql/coffee_sales_analysis.sql)  
+- 📘 **SQL Scripts:** [`sql/coffee_sales_analysis.sql`](https://github.com/Shashankii/Coffee-Shop-Sales/blob/main/Sql%20coffee%20sales%20analysis.sql)  
 - 📊 **Power BI Dashboard (Live):** [Click to View Dashboard](YOUR_POWERBI_PUBLIC_LINK_HERE)  
 - 💻 **GitHub Repository:** [github.com/Shashankii/Coffee-Shop-Sales](https://github.com/Shashankii/Coffee-Shop-Sales)  
 
