@@ -1,5 +1,5 @@
 
-# ☕ Coffee Shop Sales — Interactive Power BI Dashboard
+# ☕ Coffee Shop Sales Analytics | SQL + Power BI Dashboard
 
 [![View Dashboard](Dashboard%20Screenshot.png)](https://github.com/Shashankii/Coffee-Shop-Sales/blob/main/Dashboard%20Screenshot.png)
 
