@@ -75,13 +75,43 @@ It enables users to explore sales patterns and performance through filters, tool
 
 ---
 
-## 🧱 Data Model Design  
+## 🧱 Data Model Design
 
-### **Tables Used**  
-- **Date Table:** Custom-built for time intelligence (month, weekday, week number, etc.)  
-- **Transactions Table:** Includes all sales, order, and quantity metrics with DAX-driven fields for MoM growth, average benchmarks, and category segmentation.  
+### *Tables Used*
+
+#### 🗓 Date Table
+A custom Date Table built for time intelligence and trend analysis.
+- *Columns:*  
+  Date, Day Name, Day Number, Month, Month Number,  
+  Month Year, Week Number, Weekday/Weekend, Year
+- Enables calculations like *Month-over-Month Growth, **Average Daily Sales, and **Calendar Tooltips*.
+
+#### 📦 Transactions Table
+Fact table containing transactional data for analysis.
+- *Columns include:*  
+  CM Sales, CM Orders, CM Quantity, Color for Bars,  
+  Daily Avg Sales, Foot Note, Hour,  
+  MoM Growth & Diff (Sales, Orders, Quantity),  
+   Labels for Categories, and a Placeholder measure for design layout.
 
 ---
+
+
+#### 🎨 Visual Elements
+
+| Visual Type           | Description                                    |
+| --------------------- | ---------------------------------------------- |
+| *KPI Cards*         | Show total metrics with MoM change indicators. |
+| *Bar Chart (Trend)* | Sales trend with average benchmark line.       |
+| *Donut Chart*       | Weekday vs Weekend contribution.               |
+| *Stacked Bars*      | Category and Store-level sales comparison.     |
+| *Heatmap*           | Day × Hour matrix for peak-hour detection.     |
+| *Calendar Chart*    | Month-based filter linked to tooltips.         |
+| *Custom Tooltips*   | Provide hover-based contextual insights.       |
+
+
+-----
+
 
 ## ⚙️ Tools & Technologies  
 
