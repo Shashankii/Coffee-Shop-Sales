@@ -77,4 +77,14 @@ Fact table containing all transactional data:
 
 ---
 
+#### 🎨 Visual Elements
+Visual Type	Description
+
+KPI Cards	Display total metrics with MoM change indicators.
+Bar Chart (Trend)	Sales over time with average line overlay.
+Donut Chart	Weekday vs Weekend contribution split.
+Stacked Bars	Sales by Category and Store.
+Heatmap	Day × Hour matrix for peak-hour detection.
+Calendar Chart	Month-wise selector linked to tooltip.
+Custom Tooltips	Extra insights for hover interactions.
 
