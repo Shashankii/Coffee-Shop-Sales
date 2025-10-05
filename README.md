@@ -1,111 +1,141 @@
 
-# ☕ Coffee Shop Sales Analytics | SQL + Power BI Dashboard
+  # ☕ Coffee Shop Sales Analytics | SQL + Power BI Dashboard  
+
 
 [![View Dashboard](Dashboard%20Screenshot.png)](https://github.com/Shashankii/Coffee-Shop-Sales/blob/main/Dashboard%20Screenshot.png)
 
-An interactive **Power BI dashboard** designed to analyze and visualize **Coffee Shop Sales Performance** across stores, product categories, and time periods.  
-This report delivers actionable insights through advanced **DAX measures**, a **custom Date Table**, and **interactive tooltip pages** — all wrapped in a sleek, dark-themed UI for professional storytelling.
+
+An end-to-end **data analytics project** that combines **SQL-based data exploration** with an **interactive Power BI dashboard** to analyze and visualize **Coffee Shop Sales Performance** across multiple store locations, product categories, and time periods.  
+
+This project demonstrates complete analytics lifecycle skills — from querying raw transactional data using **SQL** to transforming it into dynamic, insight-driven visuals in **Power BI**.  
 
 ---
 
-## 📊 Overview
+## 📊 Project Overview  
 
-The dashboard answers key business questions such as:
-- How are overall sales, orders, and quantities trending month-over-month?
-- Which products and stores drive the most revenue?
-- How do weekdays compare with weekends?
-- What time of the day experiences the highest sales volume?
-- How can the store optimize staffing and promotions using hourly insights?
-
----
-
-## 🚀 Key Highlights & Insights
-
-- **Total Sales:** ~$166K in June 2023, showing a **+6.23% growth vs last month**.  
-- **Total Orders:** 35,352 with a **+5.44% increase**.  
-- **Quantity Sold:** 50,942 with a **+5.62% rise vs last month**.  
-- **Weekday vs Weekend:** Weekdays generate ~73% of total revenue; weekends yield higher per-order values.  
-- **Top Store:** *Hell’s Kitchen* ($56K) leads, followed by *Astoria* and *Lower Manhattan*.  
-- **Category Insights:** Coffee dominates sales (~$67K), followed by Tea and Bakery.  
-- **Daily Trend:** Most days align near the average line ($5.5K/day) with weekend spikes.  
-- **Hourly Pattern:** Sales peak between **10 AM and 3 PM**, especially **Fri–Sun**.  
-- **Growth Potential:** *Premium Brewed Coffee* and *Organic Coffee* show steady upward trends.
+This project answers key business questions such as:  
+- How are total sales, orders, and quantities trending month-over-month?  
+- Which products and stores contribute the most to overall revenue?  
+- How do weekday and weekend sales patterns differ?  
+- What are the peak sales hours across all locations?  
+- How can management use these insights to optimize operations and promotions?  
 
 ---
 
-## 🧭 Report Pages
+## 🧮 SQL Data Analysis  
 
-### **1. Sales Overview (Main Page)**
-Comprehensive visual overview combining:
-- KPI Cards for **Total Sales, Orders, and Quantity Sold** with MoM % growth.  
-- **Sales Trend Over the Period** chart with an average sales benchmark line.  
-- **Sales by Product Category** and **Store Location** bar visuals.  
-- **Weekday vs Weekend split** using a donut chart.  
-- **Day × Hour Heatmap** showing hourly sales distribution.  
-- **Filter Panel (Month selector)** for quick time-based exploration.
+The data foundation of this dashboard was built using **SQL**, focusing on transforming raw transactional data into analytical metrics.  
 
-### **2. Tooltip – Calendar Chart**
-A **hover-based tooltip** that dynamically shows daily-level sales metrics:
-- Total Sales, Orders, and Average Daily Sales.  
-- Built as a dedicated tooltip page linked to the main calendar visual.
+Key objectives of the SQL layer included:  
+- Aggregating daily, monthly, and hourly sales trends.  
+- Calculating **Month-over-Month (MoM)** growth for sales, orders, and quantity.  
+- Comparing **Weekday vs Weekend** performance for better resource planning.  
+- Ranking **Top-performing product categories** and **store locations**.  
+- Identifying **Above/Below Average** daily performance patterns.  
 
-### **3. Tooltip – Day & Hour Chart**
-An advanced tooltip providing **hourly breakdowns** for the hovered date — allowing users to identify sales concentration without switching pages.
+The SQL scripts served as the analytical engine — preparing clean, summarized, and structured data that was later visualized in Power BI.  
 
-> 🧠 **Why Tooltips Matter:** These context-aware hover insights make exploration seamless and improve interactivity, helping users stay focused on the story behind the data.
+📂 All SQL scripts are available in the [`sql/`](sql/) directory of this repository.  
 
 ---
 
-## 🧱 Data Model Design
+## 📈 Power BI Dashboard  
 
-### **Tables Used**
+The **Power BI dashboard** translates SQL-derived insights into visually rich, interactive reports.  
+It enables users to explore sales patterns and performance through filters, tooltips, and trend visuals.  
 
-#### 🗓️ Date Table
-A custom Date Table built for time intelligence and trend analysis.
-- **Columns:**  
-  `Date`, `Day Name`, `Day Number`, `Month`, `Month Number`,  
-  `Month Year`, `Week Number`, `Weekday/Weekend`, `Year`
-- Enables calculations like **Month-over-Month Growth**, **Average Daily Sales**, and **Calendar Tooltips**.
+### 🔹 Key Highlights  
+- **Total Sales:** ~$166K in June 2023, with a **+6.23% MoM growth**  
+- **Total Orders:** 35,352 with a **+5.44% increase**  
+- **Quantity Sold:** 50,942 with a **+5.62% rise**  
+- **Weekday vs Weekend:** Weekdays generate ~73% of total revenue  
+- **Top Store:** *Hell’s Kitchen* ($56K), followed by *Astoria* and *Lower Manhattan*  
+- **Category Insights:** Coffee leads sales (~$67K), followed by Tea and Bakery  
+- **Peak Hours:** 10 AM – 3 PM, especially **Friday to Sunday**  
 
-#### 📦 Transactions Table
-Fact table containing transactional data for analysis.
-- **Columns include:**  
-  `CM Sales`, `CM Orders`, `CM Quantity`, `Color for Bars`,  
-  `Daily Avg Sales`, `Foot Note`, `Hour`,  
-  `MoM Growth & Diff (Sales, Orders, Quantity)`,  
-   `Labels for Categories`, and a `Placeholder` measure for design layout.
-   
+---
 
+## 🧭 Dashboard Pages  
 
-#### 🎨 Visual Elements
+### **1. Sales Overview**  
+- KPI Cards for **Sales, Orders, Quantity Sold**, and MoM growth  
+- Sales trends with average benchmarks  
+- Store and Category performance comparisons  
+- Weekday vs Weekend split using donut visuals  
+- Hourly sales heatmap for staffing optimization  
 
-| Visual Type           | Description                                    |
-| --------------------- | ---------------------------------------------- |
-| **KPI Cards**         | Show total metrics with MoM change indicators. |
-| **Bar Chart (Trend)** | Sales trend with average benchmark line.       |
-| **Donut Chart**       | Weekday vs Weekend contribution.               |
-| **Stacked Bars**      | Category and Store-level sales comparison.     |
-| **Heatmap**           | Day × Hour matrix for peak-hour detection.     |
-| **Calendar Chart**    | Month-based filter linked to tooltips.         |
-| **Custom Tooltips**   | Provide hover-based contextual insights.       |
+### **2. Tooltip – Calendar Chart**  
+- Displays daily-level metrics when hovering over visuals  
+- Shows Total Sales, Orders, and Avg Daily Sales for that date  
 
+### **3. Tooltip – Day & Hour Chart**  
+- Reveals hourly breakdowns for hovered days, improving context and storytelling  
 
-#### ▶️ How to Use
+> 🧠 **Impact:** These contextual tooltips enhance interactivity and allow stakeholders to explore insights seamlessly without changing pages.  
 
-1) Download or clone this repository.
+---
 
+## 🧱 Data Model Design  
+
+### **Tables Used**  
+- **Date Table:** Custom-built for time intelligence (month, weekday, week number, etc.)  
+- **Transactions Table:** Includes all sales, order, and quantity metrics with DAX-driven fields for MoM growth, average benchmarks, and category segmentation.  
+
+---
+
+## ⚙️ Tools & Technologies  
+
+| Category | Tools Used |
+|-----------|-------------|
+| Data Querying | **SQL Workbench** |
+| Data Modeling | **Power BI Desktop** |
+| Visualization | **Power BI (DAX, Tooltips, Filters)** |
+| Version Control | **GitHub** |
+
+---
+
+## 💡 Business Impact  
+
+Through this project, decision-makers can:  
+- Track monthly growth and performance KPIs across stores.  
+- Identify high-performing product categories and optimize inventory.  
+- Adjust staffing based on peak-hour sales insights.  
+- Leverage weekday vs weekend trends for marketing and promotions.  
+
+---
+
+## ▶️ How to Use  
+
+1️⃣ **Clone or Download** this repository:  
+```bash
 git clone https://github.com/Shashankii/Coffee-Shop-Sales.git
+```
 
-2) Open CoffeeShopSales.pbix in Power BI Desktop (latest version).
+2️⃣ **Open Power BI Dashboard:**  
+- File: `CoffeeShopSales.pbix`  
+- If prompted, update data source paths via *Transform Data → Data Source Settings.*  
 
-3) If prompted, update data source paths via Transform Data → Data Source Settings.
+3️⃣ **Run SQL Scripts (Optional):**  
+- File: `sql/coffee_sales_analysis.sql`  
+- Execute in SQL Workbench or any SQL-compatible environment to view analytical outputs.  
 
-4) Hover over visuals to explore interactive tooltips and switch months using the filter panel.
+---
 
-#### 💼 Portfolio Highlight
+## 💼 Portfolio Highlight  
 
-“Developed an end-to-end Power BI dashboard for Coffee Shop Sales using a custom Date Table, DAX measures, and interactive tooltip pages.
-Designed KPI cards, trend analysis visuals, and an hour-by-day heatmap to help identify performance patterns and business opportunities.
-Combined data modeling and visual storytelling for actionable business insights.”
+> “Designed an **end-to-end Coffee Shop Sales Analytics solution** integrating **SQL-based data analysis** and **Power BI dashboarding**.  
+> Leveraged SQL for trend analysis, growth tracking, and business segmentation.  
+> Built interactive Power BI visuals with custom DAX measures, dynamic tooltips, and KPI indicators to uncover actionable insights.”  
 
-  
+---
+
+## 🔗 Quick Links  
+
+- 📘 **SQL Scripts:** [`sql/coffee_sales_analysis.sql`](sql/coffee_sales_analysis.sql)  
+- 📊 **Power BI Dashboard (Live):** [Click to View Dashboard](YOUR_POWERBI_PUBLIC_LINK_HERE)  
+- 💻 **GitHub Repository:** [github.com/Shashankii/Coffee-Shop-Sales](https://github.com/Shashankii/Coffee-Shop-Sales)  
+
+---
+
+✨ *This project demonstrates the full analytics workflow — from raw data to strategic insights — blending SQL logic and Power BI visualization into one cohesive story.*  
+
